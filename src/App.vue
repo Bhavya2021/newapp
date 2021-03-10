@@ -1,17 +1,34 @@
+
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <!-- <DataBinding type="hover" /> -->
+     <!-- <DataBinding type="hover1"/> -->
+      <!-- <DataBinding type="hover2"/> -->
+      <!-- <Api/>
+      <Login />
+      <Register /> -->
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import DataBinding from './components/Databinding.vue'
+// import Api from './components/api.vue'
+// import Login from './components/login'
+// import Register from './components/Register';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+
+    // DataBinding,
+    // Api,
+    // Login,
+    // Register
   }
 }
 </script>
