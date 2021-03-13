@@ -6,10 +6,12 @@
     <!-- <DataBinding type="hover" /> -->
      <!-- <DataBinding type="hover1"/> -->
       <!-- <DataBinding type="hover2"/> -->
-      <!-- <Api/>
-      <Login />
-      <Register /> -->
-      <router-view></router-view>
+      <!-- <Api/> -->
+      <!-- <Login /> -->
+      <!-- <Register /> -->
+      <!-- <Profile /> -->
+      <Nav />
+      <router-view :fav=favorite @addfav="addFav"></router-view>
   </div>
 </template>
 
@@ -19,9 +21,22 @@
 // import Api from './components/api.vue'
 // import Login from './components/login'
 // import Register from './components/Register';
-
+// import Profile from './components/profile'
+import Nav from './components/Nav.vue'
 export default {
   name: 'App',
+ 
+  data(){
+      return{
+        favorite:[]
+      }
+  },
+  methods:{
+          addFav(e){
+             console.log(e)
+             this.favorite.push(e)
+          }
+  },
   components: {
     // HelloWorld,
 
@@ -29,6 +44,8 @@ export default {
     // Api,
     // Login,
     // Register
+    // Profile
+    Nav
   }
 }
 </script>
